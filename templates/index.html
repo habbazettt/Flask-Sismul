@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Compression</title>
+</head>
+
+<body>
+    <h1>Upload and Compress Files</h1>
+
+    <!-- Form untuk mengunggah file Image -->
+    <form action="/upload_image" method="post" enctype="multipart/form-data">
+        <h2>Upload Image</h2>
+        <input type="file" name="image" accept="image/*"><br><br>
+        <button type="submit">Upload and Compress Image (DCT & DWT)</button>
+    </form>
+    <br>
+
+    <!-- Form untuk mengunggah file Audio -->
+    <form action="/upload_audio" method="post" enctype="multipart/form-data">
+        <h2>Upload Audio</h2>
+        <input type="file" name="audio" accept=".mp3, .wav"><br><br>
+        <button type="submit">Upload and Compress Audio (DCT & DWT)</button>
+    </form>
+    <br>
+
+    <!-- Form untuk mengunggah file Video -->
+    <form action="/upload_video" method="post" enctype="multipart/form-data">
+        <h2>Upload Video</h2>
+        <input type="file" name="video" accept="video/*"><br><br>
+        <button type="submit">Upload and Compress Video (DCT & DWT)</button>
+    </form>
+    <br>
+
+    <!-- Pesan dari server -->
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    <!-- Tampilkan link download jika ada -->
+    {% if compressed_file %}
+    <p>File compressed successfully! <a href="{{ url_for('download_file', filename=compressed_file) }}">Download
+            Compressed File</a></p>
+    {% endif %}
+
+</body>
+
+</html>
