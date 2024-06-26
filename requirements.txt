@@ -4,6 +4,6 @@ Pillow
 numpy
 scipy
 librosa
-pywt==1.1.1
 soundfile
 opencv-python-headless
+pywt==1.1.1
