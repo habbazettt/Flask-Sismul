@@ -6,4 +6,4 @@ scipy
 librosa
 soundfile
 opencv-python-headless
-pywt==1.1.1
+pywt
