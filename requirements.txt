@@ -1,9 +1,6 @@
 Flask
-Werkzeug
-Pillow
 numpy
-scipy
 librosa
+PyWavelets>=1.3.0  # Latest PyWavelets version
 soundfile
 opencv-python-headless
-pywt==1.3.0
